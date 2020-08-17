@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #303a52;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container__video {
+    height:100vh;
+    filter: opacity(.3);
+}
+
+.header__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #ffffff;
+    width: 80%;
+    text-align: center;
+}
+
+.header__title--profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: none;
+    margin: auto;
+    -webkit-box-shadow: 7px 7px 13px -6px rgba(0,0,0,0.75);
+}
+
+.header__title--passion {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.5em;
+}
+
+.header__image {
+    background-image: url("../assets/image.jpg");
+    background-size: cover;
+    height: 100vh;
+    opacity: 0.3;
+    display: none;
+}
+
+.navigation {
+    height: 100px;
+    background-color: #303a52 ;
+    display: flex;
+}
+
+.navigation__item {
+    color: #ffffff;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.8em;
+}
+
+.navigation__item:hover {
+    background-color: #fc5185;
+    cursor: pointer;
+    animation: heartBeat; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+
+@media screen and (max-width: 800px) {
+    .video-container__video {
+      display: none;
+    }
+    
+    .header__image {
+        display: block;
+    }
+
+    .header__title--passion {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 3em;
+    }
+
+    .header__title {
+        width: 80%;
+    }
+
+    .header__title--profile {
+        display: block;
+    }
+}
