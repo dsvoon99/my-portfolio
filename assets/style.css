@@ -39,7 +39,6 @@ header {
 }
 
 .navigation__item {
-    color: #ffffff;
     list-style: none;
     height: 100%;
     display: flex;
@@ -48,6 +47,16 @@ header {
     flex-grow: 1;
     font-family: 'Bebas Neue', cursive;
     font-size: 1.8em;
+}
+
+.navigation__item a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navigation__item a:hover {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .navigation__item:hover {
