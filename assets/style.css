@@ -25,27 +25,12 @@ header {
     text-align: center;
 }
 
-.header__title--profile {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    display: none;
-    margin: auto;
-    -webkit-box-shadow: 7px 7px 13px -6px rgba(0,0,0,0.75);
-}
 
 .header__title--passion {
     font-family: 'Bebas Neue', cursive;
     font-size: 3.5em;
 }
 
-.header__image {
-    background-image: url("../assets/image.jpg");
-    background-size: cover;
-    height: 100vh;
-    opacity: 0.3;
-    display: none;
-}
 
 .navigation {
     height: 100px;
@@ -69,29 +54,115 @@ header {
     background-color: #fc5185;
     cursor: pointer;
     animation: heartBeat; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.aboutme {
+    background-image: url("../assets/image.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.aboutme__overlay {
+    background-color: #303a52;
+    height: 100vh;
+    opacity: 0.5;
+}
+
+.aboutme__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:0; 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aboutme__container--left {
+    width: 50%;
+    position: relative;
 }
 
 
+.aboutme__container--right {
+    width: 50%;
+    position: relative;
+}
+
+.aboutme__container--overlay {
+    background-color: #fc5185;
+    height: 100vh;
+    opacity: 0.2;
+}
+
+.aboutme__container--profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.aboutme__container--description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 0px 0px 0px 60px;
+}
+
+.profile {
+    margin-bottom: 10px;
+}
+
+.myaction {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5em;
+}
+
+.mydescription {
+    width: 80%;
+    font-size: 1.5em;
+}
+
+.button {
+    color: #ffffff;
+    border: none;
+    background-color: #303a52;
+    padding: 20px 30px;
+    font-size: 0.8em;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #fc5185;
+}
+
 @media screen and (max-width: 800px) {
-    .video-container__video {
-      display: none;
+    .aboutme__container--left {
+        width: 100%;
     }
     
-    .header__image {
-        display: block;
+    
+    .aboutme__container--right {
+        width: 100%;
     }
 
-    .header__title--passion {
-        font-family: 'Bebas Neue', cursive;
-        font-size: 3em;
-    }
-
-    .header__title {
-        width: 80%;
-    }
-
-    .header__title--profile {
-        display: block;
+    .aboutme__container--overlay {
+        display: none;
     }
 }
