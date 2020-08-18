@@ -1,0 +1,147 @@
+.myproject {
+    height: 100vh;
+    background-color: #303a52;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.myproject__class {
+    color: #ffffff;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+    list-style: none;
+    margin: 0px 20px;
+    width: 400px;
+    text-align: center;
+}
+
+.myproject__class--ml {
+    display: none;
+}
+
+.myproject__class--cc {
+    display: none;
+}
+
+.myproject__navbar {
+    display: flex;
+    align-items: center;
+}
+
+.myproject__content {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.myproject .myproject__content--hide {
+    display: none;
+}
+
+.myproject__content--flex {
+    display: flex;
+    align-items: center;
+    height: 80%;
+}
+
+.myproject__arrow {
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    animation: flash infinite;
+    animation-duration: 1s;
+}
+
+.fancy__container {
+    margin-right: 5px;
+    position: relative;
+}
+
+.fancy__container:hover  .fancy__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse;
+    animation-duration: 1s;
+}
+
+.fancy__image {
+    width: 100%
+}
+
+.fancy__container:hover  .fancy__image{
+    opacity: 0.5;
+}
+
+.fancy__title {
+    width: 60%;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+    height: 20%;
+    color: #ffffff;
+    font-size: 2em;
+    font-family: 'Bebas Neue', cursive;
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+
+    .myproject__content {
+        display: block;
+    }
+
+    .fancy__container {
+        margin-bottom: 10px;
+    }
+
+    .myproject {
+        height: auto;
+    }
+
+    .myproject__navbar {
+        padding-bottom: 25px;
+        align-items: center;
+    }
+
+    .myproject__class {
+        color: #ffffff;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 2.5em;
+        list-style: none;
+        margin: 0px;
+        flex-grow: 1;
+        text-align: center;
+        width: auto;
+    }
+
+    .fancy__container {
+        margin-right: 0;
+    }
+
+    .fancy__title {
+        width: 60%;
+        background-color: #000000;
+        position: absolute;
+        bottom: 0;
+        right: 0; 
+        height: 20%;
+        color: #ffffff;
+        font-size: 2em;
+        font-family: 'Bebas Neue', cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fancy_box--left {
+        width: 100%; 
+    }
+}

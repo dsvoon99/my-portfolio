@@ -1,0 +1,12 @@
+.contact {
+    height: 100vh;
+    background-image: url("../assets/contact.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.contact__overlay {
+    background-color: #303a52;
+    opacity: 0.5;
+    height: 100%;
+}

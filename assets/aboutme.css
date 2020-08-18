@@ -1,0 +1,128 @@
+.aboutme {
+    background-image: url("../assets/image.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+}
+
+.aboutme__overlay {
+    background-color: #303a52;
+    opacity: 0.5;
+    height: 100%;
+}
+
+.aboutme__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:0; 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aboutme__container--left {
+    width: 50%;
+    position: relative;
+    height: 100vh;
+}
+
+
+.aboutme__container--right {
+    width: 50%;
+    position: relative;
+    height: 100vh;
+}
+
+.aboutme__container--overlay {
+    background-color: #fc5185;
+    height: 100%;
+    opacity: 0.2;
+}
+
+.aboutme__container--profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.aboutme__container--description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 0px 0px 0px 60px;
+}
+
+.profile {
+    margin-bottom: 10px;
+}
+
+.myaction {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5em;
+}
+
+.mydescription {
+    width: 80%;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 800px) {
+    .aboutme {
+        height: 120vh;
+    }
+
+    .aboutme__container {
+        height: 100%;
+    }
+
+    .aboutme__container--left {
+        width: 100vw;
+        height: 50%;
+    }
+    
+    
+    .aboutme__container--right {
+        width: 100vw;
+        height: 50%;
+    }
+
+    .aboutme__container--overlay {
+        display: none;
+    }
+    
+    .aboutme__container--description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        color: white;
+        padding: 0px 0px 0px 60px;
+    }
+
+    .mydescription {
+        font-size: 1em;
+    }
+
+    .myaction {
+        font-size: 3.5em;
+    }
+
+}
