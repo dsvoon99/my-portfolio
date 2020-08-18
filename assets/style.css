@@ -47,11 +47,11 @@ header {
     position: fixed;
     width: 100%;
     background-color: #fc5185;
-    opacity: 0;
+    display: none;
 }
 
 .navbar__fixed--visible {
-    opacity: 1;
+    display: flex;
 }
 
 .navigation__item {
