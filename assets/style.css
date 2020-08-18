@@ -38,6 +38,20 @@ header {
     height: 100px;
     background-color: #303a52 ;
     display: flex;
+    overflow: hidden;
+}
+
+.navbar__fixed {
+    bottom: 0;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    background-color: #fc5185;
+    opacity: 0;
+}
+
+.navbar__fixed--visible {
+    opacity: 1;
 }
 
 .navigation__item {
@@ -152,6 +166,75 @@ header {
     font-size: 1.5em;
 }
 
+.myproject {
+    height: 100vh;
+    background-color: #303a52;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.myproject__class {
+    color: #ffffff;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+    list-style: none;
+}
+
+.myproject__class--ml {
+    display: none;
+    animation: rubberBand;
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.myproject__class--cc {
+    display: none;
+}
+
+.myproject__navbar {
+    display: flex;
+    align-items: center;
+}
+
+.myproject__content {
+    display: flex;
+    align-items: center;
+    height: 80%;
+}
+
+.fancy__container {
+    margin-right: 5px;
+    position: relative;
+}
+
+.fancy__container:hover  .fancy__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse;
+    animation-duration: 1s;
+}
+
+.fancy__image {
+    width: 100%
+}
+
+.fancy__container:hover  .fancy__image{
+    opacity: 0.5;
+}
+
+.fancy__title {
+    width: 60%;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+    height: 20%;
+    color: #ffffff;
+    font-size: 2em;
+    font-family: 'Bebas Neue', cursive;
+    display: none;
+}
+
 .button {
     color: #ffffff;
     border: none;
@@ -213,5 +296,39 @@ header {
     .myaction {
         font-size: 3.5em;
     }
-    
+
+    .myproject__content {
+        display: block;
+    }
+
+    .fancy__container {
+        margin-bottom: 10px;
+    }
+
+    .myproject {
+        height: auto;
+    }
+
+    .myproject__navbar {
+        padding-bottom: 25px;
+    }
+
+    .fancy__title {
+        width: 60%;
+        background-color: #000000;
+        position: absolute;
+        bottom: 0;
+        right: 0; 
+        height: 20%;
+        color: #ffffff;
+        font-size: 2em;
+        font-family: 'Bebas Neue', cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fancy_box--left {
+        width: 100%; 
+    }
 }

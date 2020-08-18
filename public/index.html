@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="../assets/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Tech.Content.Voon</title>
 </head>
@@ -21,8 +21,14 @@
     </header>
     <nav class="navigation">
         <li class="navigation__item"><a href="#aboutme">About Me</a></li>
-        <li class="navigation__item"><a href="#aboutme">My Projects</a></li>
-        <li class="navigation__item"><a href="#aboutme">Contact</a></li>
+        <li class="navigation__item"><a href="#myproject">My Projects</a></li>
+        <li class="navigation__item"><a href="#contact"> Contact</a></li>
+    </nav>
+
+    <nav class="navigation navbar__fixed">
+        <li class="navigation__item"><a href="#aboutme">About Me</a></li>
+        <li class="navigation__item"><a href="#myproject">My Projects</a></li>
+        <li class="navigation__item"><a href="#aboutme"> Contact</a></li>
     </nav>
 
     <section class="aboutme" id="aboutme">
@@ -49,9 +55,75 @@
         </div>
     </section>
 
+    <section class="myproject" id="myproject">
+        <nav class="myproject__navbar">
+            <li class="myproject__class myproject__class--md">Mobile Development</li>
+            <li class="myproject__class myproject__class--ml">Machine Learning</li>
+            <li class="myproject__class myproject__class--cc">Content Creation</li>
+        </nav>
+        <div class="myproject__content">
+            <div class="fancy__container" data-name="RentPay">
+                <img src="../assets/image.jpg" alt="" class="fancy__image"/>
+                <div class="fancy__title">RentPay</div>
+            </div>
+            <div class="fancy__container" data-name="DisStudent">
+                <img src="../assets/image.jpg" alt="" class="fancy__image"/>
+                <div class="fancy__title">DisStudent</div>
+            </div>
+            <div class="fancy__container" data-name="RentPay">
+                <img src="../assets/image.jpg" alt="" class="fancy__image"/>
+                <div class="fancy__title">RentPay</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        
+    </section>
+
     <script src="http://localhost:8080/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        var description, url;
+        $('.fancy__container').click(function() {
+            const name = $(this).data("name");
+            switch(name) {
+                case "RentPay":
+                    description = "The best e-wallet for tenant. A hobby project built using Flutter and GrabPay API to solve the problem of rental payment for landlord and tenant."
+                    url = "https://google.com"
+                    break;
+
+                case "DisStudent":
+                    description = "The best student discount app."
+                    url = "https://google.com"
+                    break;
+            }
+            $.fancybox.open(`
+                <div>
+                    <div>
+                        <img src="../assets/image.jpg" style="width: 400px; "/>
+                    </div>
+                    <div style="margin-top: 20px; ">
+                        <p>${name}</p>
+                        <p style="width: 400px; ">${description}</p>
+                        <a href='${url}' target="_blank">Visit ${name} >></a>
+                    </div>
+                </div>`);
+        })
+        $(window).scroll(function () {
+            console.log($(window).scrollTop())
+            $(window).scroll(function() {
+                clearTimeout($.data(this, 'scrollTimer'));
+                $.data(this, 'scrollTimer', setTimeout(function() {
+                    $('.navbar__fixed').removeClass('navbar__fixed--visible');
+                }, 2000));
+                if ($(window).scrollTop() > 1000) {
+                    $('.navbar__fixed').addClass('navbar__fixed--visible');
+                }
+                if ($(window).scrollTop() < 1001) {
+                    $('.navbar__fixed').removeClass('navbar__fixed--visible');
+                }
+            })
+        });
+    </script>
 </body>
 </html>
