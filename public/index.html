@@ -31,7 +31,7 @@
     <nav class="navigation navbar__fixed">
         <li class="navigation__item"><a href="#aboutme">About Me</a></li>
         <li class="navigation__item"><a href="#myproject">My Projects</a></li>
-        <li class="navigation__item"><a href="#aboutme"> Contact</a></li>
+        <li class="navigation__item"><a href="#contact"> Contact</a></li>
     </nav>
 
     <section class="aboutme" id="aboutme">
@@ -41,7 +41,7 @@
             <div class="aboutme__container--left">
                 <div class="aboutme__container--description">
                     <p class="mydescription">
-                        Hi, I'm Voon! A final year (2020) student in Software Engineering from University of Nottingham Malaysia with passion in mobile development, 
+                        Hi, I'm Voon. A final year (2020) student in Software Engineering from University of Nottingham Malaysia with passion in mobile development, 
                         automation programming, machine learning, content creation and personal finance. 
                     </p>
                     <a class="button">Explore my work in these realms!</a>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="aboutme__container--profile">
                     <img src="../assets/profile002.png" class="profile"/>
-                    <p class="myaction">Let's connect!</p>
+                    <p class="myaction">Let's connect.</p>
                 </div>
             </div>
         </div>
@@ -115,46 +115,33 @@
     <section class="contact" id="contact">
         <div class="contact__overlay">
         </div>
-        
+        <div class="contact__container">
+            <p class="contact__title">Let's keep in touch.</p>
+            <form
+            action="https://formspree.io/xpzyeqvv"
+            method="POST"
+            class="contactform"
+            >
+                <div>
+                    <input type="text" name="_replyto" placeholder="Email" class="contactform__element contactform__element--name">
+                </div>
+                <div>
+                    <textarea rows="5" name="message" placeholder="Message" class="contactform__element"></textarea>
+                </div>
+            <button type="submit" class="contactform__button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </button>
+            </form>
+        </div>
     </section>
 
     <script src="http://localhost:8080/script.js"></script>
     <script>
-        var pointer = 0;
-        var idsHidden = [1,2];
-        var classes = [".myproject__class--md", ".myproject__class--ml", ".myproject__class--cc"];
-        $.each(idsHidden, function(i,v) {
-            $(`#${v}`).addClass("myproject__content--hide");
-        })
-        $(".myproject__arrow--right").click(function() {
-            pointer++;
-            if(pointer >= classes.length) {
-                pointer = 0 
-            }
-            $(classes[pointer]).fadeIn();
-            $(`#${pointer}`).removeClass("myproject__content--hide");
-            $.each(classes, function(i, c) {
-                if(i != pointer) {
-                    $(c).hide();
-                    $(`#${i}`).addClass("myproject__content--hide");
-                }
-            })
-        })
-
-        $(".myproject__arrow--left").click(function() {
-            pointer--;
-            if(pointer < 0) {
-                pointer = classes.length - 1;
-            }
-            $(classes[pointer]).fadeIn();
-            $(`#${pointer}`).removeClass("myproject__content--hide");
-            $.each(classes, function(i, c) {
-                if(i != pointer) {
-                    $(c).hide();
-                    $(`#${i}`).addClass("myproject__content--hide");
-                }
-            })
-        })
+       
     </script>
 </body>
 </html>
