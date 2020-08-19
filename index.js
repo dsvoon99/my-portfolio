@@ -12,6 +12,7 @@ import '@fortawesome/fontawesome-free/js/brands'
 import StickyBar from "./StickyBar";
 import FancyContainer from "./FancyContainer";
 import MyProjectSelector from "./MyProjectSelector";
+import ContactForm from "./ContactForm";
 
 var options = {
   strings: ["Mobile Developer . Machine Learning . Content Creator", "Mobile Developer . Machine Learning . Content Creator", "Mobile Developer . Machine Learning . Content Creator"],
@@ -26,3 +27,4 @@ var scroll = new SmoothScroll('a[href*="#"]');
 var stickyBar = new StickyBar();
 var fancyContainer = new FancyContainer();
 var myProjectSelector = new MyProjectSelector();
+var contactForm = new ContactForm();

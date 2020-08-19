@@ -118,6 +118,7 @@
         <div class="contact__container">
             <p class="contact__title">Let's keep in touch.</p>
             <form
+            id="my-form"
             action="https://formspree.io/xpzyeqvv"
             method="POST"
             class="contactform"
@@ -128,7 +129,8 @@
                 <div>
                     <textarea rows="5" name="message" placeholder="Message" class="contactform__element"></textarea>
                 </div>
-            <button type="submit" class="contactform__button">
+                <p id="statusmessage" class="statusmessage"></p>
+            <button type="submit" class="contactform__button" style="outline: none;">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -140,8 +142,5 @@
     </section>
 
     <script src="http://localhost:8080/script.js"></script>
-    <script>
-       
-    </script>
 </body>
 </html>

@@ -59,6 +59,7 @@
     position: relative;
     overflow: hidden;
     margin-top: 10px;
+    outline: none;
 }
 
 .contactform__button span {
@@ -150,6 +151,10 @@ select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+}
+
+.statusmessage {
+    color: #fff;
 }
 
 @media screen and (max-width: 800px) {
