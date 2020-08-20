@@ -106,6 +106,7 @@ header {
 
     .video-container__video {
         height:100vh;
+        width: auto;
         filter: opacity(.3);
     }
 }
@@ -114,6 +115,7 @@ header {
 
     .video-container__video {
         height:100vh;
+        width: auto;
         filter: opacity(.3);
     }
 }
